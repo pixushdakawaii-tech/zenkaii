@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
+
+        body {
+            background-color: rgb(100, 211, 174);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            position: relative;
+            border: 5px solid aliceblue;
+            width: 360px;
+            max-width: 80%;
+            height: auto;
+            margin: 40px auto;
+            border-radius: 1pc;
+            top: 10px;
+            padding: 6px;
+            background-color: aliceblue;
+            box-sizing: border-box;
+            box-shadow: 2px 4px 6px;
+        }
+
+        img {
+            position: relative;
+            right: 3px;
+            width: 100%;
+            height: 50%;
+            border: 2px solid aliceblue;
+            border-radius: 1.5pc;
+            box-shadow: 3px 1px 9px;
+            object-fit: cover;
+            cursor: grab;
+        }
+
+        .box {
+            position: relative;
+            z-index: 0;
+            left: 10px;
+            border-color: antiquewhite;
+            display: inline;
+            top: 10px;
+            border: 0.5px solid;
+            font-weight: 1000;
+            color: gray;
+            font-family: 'Baloo Bhai 2', sans-serif;
+            font-size: 13px;
+            margin: 7px;
+            border-radius: 0.6pc;
+            padding: 2px 3px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+
+        h1 {
+            position: relative;
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 0.7rem;
+            word-spacing: 2%;
+            font-family: 'Baloo Bhai 2', sans-serif;
+            color: #4b5e80;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            width: max-content;
+        }
+
+        h1::after {
+            margin: -5px;
+            margin-left: 2px;
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: .2em;
+            width: 100%;
+            background-image: linear-gradient(to right, #008793, #a8edea, #3f927b);
+            width: 13rem;
+            border-radius: 1rem;
+            scale: 0;
+            transition: scale 700ms ease;
+        }
+
+        h1:hover::after {
+            scale: 1;
+        }
+
+        p {
+            font-weight: 700;
+            margin-left: 0.7rem;
+            color: gray;
+            font-family: 'Baloo Bhai 2', sans-serif;
+
+        }
+
+        .btn-container {
+            display: inline;
+            background-color: #aecdf3;
+            font-size: 10px;
+            margin: auto;
+            border: 2px solid rgb(166, 205, 236);
+            border-radius: 2pc;
+            text-align: center;
+            color: rgb(6, 155, 175);
+            font-weight: 1000;
+            font-family: "poppins";
+            box-sizing: border-box;
+            cursor: pointer;
+            margin-top: 1.2rem;
+            margin-bottom: -0.5rem;
+            display: flex;
+            padding: 9px;
+            transition: all 0.5s ease;
+        }
+
+        .btn-container:hover {
+            background-color: #3b82f6;
+            color: white;
+
+            box-shadow:
+                0 0 5px #3b82f6,
+                0 0 15px #3b82f6,
+                0 0 30px #3b82f6,
+                0 0 60px #3b82f6;
+
+            transform: translateY(-3px);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .author {
+            display: inline;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            color: #8285b8;
+            font-size: 0.85rem;
+            margin-top: 1.5rem;
+            margin-bottom: -20rem;
+            letter-spacing: 0.5px;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.172rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+        }
+
+        .author:hover {
+            background-image: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            box-sizing: border-box;
+            box-shadow:
+                0 0 5px #833AB4,
+                0 0 10px #E1306C,
+                0 0 15px #F56040;
+            animation: instaGlow 1.2s infinite alternate;
+        }
+
+        @keyframes instaGlow {
+            from {
+                box-shadow:
+                    0 0 5px #833AB4,
+                    0 0 10px #E1306C;
+            }
+
+            to {
+                box-shadow:
+                    0 0 15px #833AB4,
+                    0 0 25px #E1306C,
+                    0 0 35px #F56040;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <img src="istockphoto-1038938314-612x612.jpg">
+        <div class="box">
+            Nature
+
+        </div>
+        <div class="box">
+            Lake
+
+        </div>
+        <div class="box">
+            Mountains
+        </div>
+        <div>
+            <h1>
+                Lago di Braies
+            </h1>
+        </div>
+
+        <div>
+            <p>
+                Nestled in the heart of the Dolomites, Lago di Braies is known for its crystal-clear waters,
+                breathtaking mountain views, and peaceful atmosphere that attracts nature lovers year-round. A
+                breathtaking alpine lake in the Dolomites, famous for its turquoise waters, wooden boats, and serene
+                mountain views.
+
+            </p>
+        </div>
+        <div>
+            <a href="https://en.wikipedia.org/wiki/Lago_di_Braies" target="_blank">
+                <button class="btn-container">Read More</button>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/pixush.v1/" target="_blank">
+                <button class="author">--@pixushdabaddiehunter</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
